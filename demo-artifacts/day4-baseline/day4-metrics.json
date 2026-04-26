@@ -1,0 +1,50 @@
+{
+  "case": "骑手 App 订单列表筛选优化",
+  "date": "2026-04-24",
+  "source": "Day 4 end-to-end validation summary + relay usage log",
+  "flow": [
+    "normalize",
+    "planner",
+    "generator"
+  ],
+  "generatorSuccessSample": {
+    "timestamp": "2026-04-24 11:02:55",
+    "model": "claude-opus-4-6",
+    "durationMs": 249188,
+    "durationSecondsInRelayLog": 249,
+    "tokenUsage": {
+      "input": 3686,
+      "output": 13687
+    },
+    "relayCostUsd": 0.576968,
+    "prdLengthApprox": 13507,
+    "sectionsGeneratedCount": 12,
+    "assumptionsCount": 8,
+    "openQuestionsCount": 8
+  },
+  "planner": {
+    "outlineCount": 12,
+    "outline": [
+      "项目背景与MVP目标",
+      "现状盘点与问题拆解",
+      "目标用户场景与任务优先级",
+      "范围、非范围与成功边界",
+      "MVP方案拍板",
+      "信息架构与入口设计",
+      "筛选规则与状态定义",
+      "关键交互流程与页面状态",
+      "技术边界、依赖与解耦方案",
+      "异常流、兼容与回滚策略",
+      "埋点、指标与验收标准",
+      "排期、资源与上线计划"
+    ]
+  },
+  "artifactStatus": {
+    "prd-rider-app-v1.md": "placeholder; replace with generatorOutput.prdMarkdown from browser Network response",
+    "planner-output.json": "partial known metadata; replace with full /api/plan response if available",
+    "screenshots/00-relay-log-day4-generator.png": "captured",
+    "screenshots/01-input.png": "pending manual capture from browser/app state",
+    "screenshots/02-planner.png": "pending manual capture from browser/app state",
+    "screenshots/03-generator-editor.png": "pending manual capture from browser/app state"
+  }
+}

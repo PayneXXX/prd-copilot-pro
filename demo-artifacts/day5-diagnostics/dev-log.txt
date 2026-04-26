@@ -1,0 +1,26 @@
+
+> prd-copilot-pro@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ✓ Compiled /api/normalize in 242ms (217 modules)
+[normalize] 04:39:44.432 1. request received (+0ms)
+[normalize] 04:39:44.433 2. body parsed (+1ms) {"size":215}
+[normalize] 04:39:44.433 3. schema validated (+1ms)
+[normalize] 04:39:44.433 4. calling anthropic (+1ms) {"source":"text","contentLen":182}
+[normalize] 04:39:59.754 5. anthropic returned (+15322ms) {"inputTokens":1635,"outputTokens":774}
+[normalize] 04:39:59.754 6. response sent (+15322ms) {"totalMs":15322}
+ POST /api/normalize 200 in 15651ms
+ ✓ Compiled /api/plan in 109ms (223 modules)
+[plan] 04:39:59.929 1. request received (+0ms)
+[plan] 04:39:59.930 2. body parsed (+1ms) {"size":1094}
+[plan] 04:39:59.930 3. schema validated (+1ms)
+[plan] 04:39:59.930 4. calling planner (+1ms) {"rawContentLen":182,"confidence":"medium"}
+[/api/plan] error: [DOMException [AbortError]: This operation was aborted]
+[plan] 04:42:59.936 X. planner aborted by timeout (+180007ms) {"totalMs":180007}
+ POST /api/plan 504 in 180175ms

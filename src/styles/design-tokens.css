@@ -1,0 +1,259 @@
+/* Editorial design tokens — Day 6 UI rework */
+
+:root {
+  /* Neutrals — paper-toned */
+  --bg-page: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F5F4EE;
+  --bg-hover: #EDECE6;
+
+  /* Borders */
+  --border-hairline: #E8E6DD;
+  --border-strong: #2B2B2B;
+
+  /* Text */
+  --text-primary: #1A1A1A;
+  --text-secondary: #555550;
+  --text-tertiary: #8A8780;
+  --text-on-accent: #FFFFFF;
+
+  /* Accent — crimson */
+  --accent-base: #B1342F;
+  --accent-hover: #962826;
+  --accent-subtle: #F4E5E3;
+
+  /* Status — desaturated, editorial */
+  --status-success: #2D5A3F;
+  --status-warning: #8B6914;
+  --status-error: #7A1F1A;
+
+  /* Typographic scale */
+  --text-display: 36px;
+  --text-h1: 28px;
+  --text-h2: 18px;
+  --text-body: 15px;
+  --text-small: 13px;
+  --text-caption: 11px;
+
+  /* Spacing scale */
+  --space-tight: 8px;
+  --space-normal: 16px;
+  --space-loose: 32px;
+  --space-section: 64px;
+}
+
+/* Tabular numerals utility (financial reports) */
+.tnum {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Editorial number — serif, tabular */
+.editorial-num {
+  font-family: var(--font-newsreader), "Newsreader", Georgia, serif;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Caption: small caps style label */
+.caption-label {
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* Hairline rule */
+.hairline {
+  border-color: var(--border-hairline);
+}
+
+/* Strong rule (under section titles) */
+.rule-strong {
+  border-color: var(--border-strong);
+}
+
+/* Pull-quote (Newsreader italic with accent left rule) */
+.pull-quote {
+  font-family: var(--font-newsreader), "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-primary);
+  border-left: 2px solid var(--accent-base);
+  padding-left: 16px;
+}
+
+/* Editorial button base — direct angle */
+.btn-editorial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 0;
+  border: 1px solid var(--text-primary);
+  background: var(--text-primary);
+  color: var(--text-on-accent);
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.btn-editorial:hover:not(:disabled) {
+  background: var(--accent-base);
+  border-color: var(--accent-base);
+}
+.btn-editorial:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-editorial-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 0;
+  border: 1px solid var(--border-hairline);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+.btn-editorial-ghost:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--text-secondary);
+}
+.btn-editorial-ghost:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-text {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-underline-offset: 4px;
+}
+.btn-text:hover:not(:disabled) {
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+.btn-text:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Editorial textarea / input — direct angle, accent focus */
+.input-editorial {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: 0;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 120ms ease;
+}
+.input-editorial:focus {
+  border-color: var(--accent-base);
+  box-shadow: inset 0 -1px 0 0 var(--accent-base);
+}
+.input-editorial:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Section title kicker (Roman numeral / chapter label) */
+.kicker {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* Display heading (Newsreader) */
+.heading-display {
+  font-family: var(--font-newsreader), "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: var(--text-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+.heading-h1 {
+  font-family: var(--font-newsreader), "Newsreader", Georgia, serif;
+  font-weight: 500;
+  font-size: var(--text-h1);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.heading-h2 {
+  font-family: var(--font-newsreader), "Newsreader", Georgia, serif;
+  font-weight: 500;
+  font-size: var(--text-h2);
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+/* Data row — financial report style */
+.data-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+.data-row:last-child {
+  border-bottom: none;
+}
+.data-row .label {
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+.data-row .value {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  color: var(--text-primary);
+}
+.data-row .value sup {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-left: 3px;
+  vertical-align: super;
+  font-feature-settings: normal;
+}
+
+/* Page surface */
+body.editorial-body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-subtle);
+  color: var(--accent-hover);
+}

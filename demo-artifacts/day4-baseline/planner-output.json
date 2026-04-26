@@ -1,0 +1,33 @@
+{
+  "status": "pending_source_recovery",
+  "note": "Day 4 成功样本的完整 Planner Response 尚未在本地文件中找到。请优先从浏览器 Network tab 的 /api/plan Response 复制完整 JSON 覆盖本文件；如果 Network 已丢失，可用后续真实跑通的 Planner 输出补齐。",
+  "knownDay4Facts": {
+    "case": "骑手 App 订单列表筛选优化",
+    "flow": "归一化 → Planner → Generator",
+    "generator": {
+      "durationMs": 249188,
+      "tokens": {
+        "input": 3686,
+        "output": 13687
+      },
+      "prdLengthApprox": 13507,
+      "sectionsGeneratedCount": 12,
+      "assumptionsCount": 8,
+      "openQuestionsCount": 8
+    },
+    "plannerOutline": [
+      "项目背景与MVP目标",
+      "现状盘点与问题拆解",
+      "目标用户场景与任务优先级",
+      "范围、非范围与成功边界",
+      "MVP方案拍板",
+      "信息架构与入口设计",
+      "筛选规则与状态定义",
+      "关键交互流程与页面状态",
+      "技术边界、依赖与解耦方案",
+      "异常流、兼容与回滚策略",
+      "埋点、指标与验收标准",
+      "排期、资源与上线计划"
+    ]
+  }
+}

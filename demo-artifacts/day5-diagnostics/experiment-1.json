@@ -1,0 +1,21 @@
+{
+  "experiment": 1,
+  "startedAt": "2026-04-24T04:39:44.085Z",
+  "steps": {
+    "normalize": {
+      "status": 200,
+      "durationMs": 15675,
+      "ok": true,
+      "summary": "优化骑手App订单列表筛选与历史订单入口",
+      "confidence": "medium"
+    },
+    "plan": {
+      "status": 504,
+      "durationMs": 180178,
+      "ok": false,
+      "error": "Planner 执行超时（180秒）。这通常是中转站长请求问题，请重试或查看 ERROR_LOG。"
+    }
+  },
+  "error": "plan failed: {\"ok\":false,\"error\":\"Planner 执行超时（180秒）。这通常是中转站长请求问题，请重试或查看 ERROR_LOG。\"}",
+  "finishedAt": "2026-04-24T04:42:59.938Z"
+}
