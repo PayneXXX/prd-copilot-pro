@@ -1,4 +1,9 @@
 # PRD Copilot Pro
+<img width="3024" height="1724" alt="e0ea9ab4e7b2e7f6f939ea43738462a8" src="https://github.com/user-attachments/assets/6d1a342a-7708-459e-8f14-5a571311994b" />
+
+<img width="3024" height="1724" alt="1e792d37f923606e75b78e16c9f16d3d" src="https://github.com/user-attachments/assets/4ddbd4df-e8cf-4de7-84bc-47a28c54de7c" />
+
+
 
 PRD Copilot Pro is a PM-facing AI copilot that turns messy product input into a reviewed PRD draft, then captures human feedback as reusable writing skills.
 
